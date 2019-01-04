@@ -25,7 +25,6 @@ build:
 
 deploy:
   provider: GitHub
-  description: "Foo"
   auth_token:
     secure: w3IVtGpacFdouiFDUcp4snp8yBelm30TUWHf+69NJ0Oh3LchiLQdMigkWWVppayw
   draft: false
