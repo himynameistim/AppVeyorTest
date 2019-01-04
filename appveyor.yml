@@ -1,0 +1,25 @@
+cache: 
+  - packages -> **\packages.config
+
+version: 1.0.{build}
+
+branches:
+  only:
+  - master
+
+nuget:
+  account_feed: true
+
+
+
+before_build:
+- cmd: nuget restore
+configuration: Release
+
+image: Visual Studio 2017
+
+build:
+  project: WebApplication1.sln
+  publish_wap_octopus: true
+  verbosity: minimal
+
